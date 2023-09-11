@@ -103,7 +103,7 @@ module.exports = function (Categories) {
         } else if (sort === 'most_views') {
             set = `cid:${cid}:tids:views`;
         } else if (sort === 'most_replies') {
-            set = `cid:${cid}:tids:views`;
+            set = `cid:${cid}:tids:replies`;
         }
 
         if (data.tag) {
