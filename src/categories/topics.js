@@ -102,6 +102,8 @@ module.exports = function (Categories) {
             set = `cid:${cid}:tids:votes`;
         } else if (sort === 'most_views') {
             set = `cid:${cid}:tids:views`;
+        } else if (sort === 'most_replies') {
+            set = `cid:${cid}:tids:views`;
         }
 
         if (data.tag) {
