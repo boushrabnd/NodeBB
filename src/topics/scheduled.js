@@ -55,6 +55,7 @@ Scheduled.pin = async function (tid, topicData) {
             `cid:${topicData.cid}:tids:posts`,
             `cid:${topicData.cid}:tids:votes`,
             `cid:${topicData.cid}:tids:views`,
+            `cid:${topicData.cid}:tids:replies`,
         ], tid),
     ]);
 };
