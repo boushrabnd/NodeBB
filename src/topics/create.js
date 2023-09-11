@@ -57,10 +57,11 @@ module.exports = function (Topics) {
         await Promise.all([
             db.sortedSetsAdd(timestampedSortedSetKeys, timestamp, topicData.tid),
             db.sortedSetsAdd([
-                'topics:views', 'topics:posts', 'topics:votes',
+                'topics:views', 'topics:posts', 'topics:votes','topics:replies',
                 `cid:${topicData.cid}:tids:votes`,
                 `cid:${topicData.cid}:tids:posts`,
                 `cid:${topicData.cid}:tids:views`,
+                `cid:${topicData.cid}:tids:replies`
             ], 0, topicData.tid),
             user.addTopicIdToUser(topicData.uid, topicData.tid, timestamp),
             db.incrObjectField(`category:${topicData.cid}`, 'topic_count'),
