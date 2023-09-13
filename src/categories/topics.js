@@ -98,13 +98,13 @@ module.exports = function (Categories) {
 
         if (sort === 'most_posts') {
             set = `cid:${cid}:tids:posts`;
+        } else if (sort === 'most_replies') {
+            set = `cid:${cid}:tids:replies`;
         } else if (sort === 'most_votes') {
             set = `cid:${cid}:tids:votes`;
         } else if (sort === 'most_views') {
             set = `cid:${cid}:tids:views`;
-        } else if (sort === 'most_replies') {
-            set = `cid:${cid}:tids:replies`;
-        }
+        } 
 
         if (data.tag) {
             if (Array.isArray(data.tag)) {
